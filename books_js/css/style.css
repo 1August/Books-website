@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2{
+    line-height: 200%;
+}
+h3, h4{
+    line-height: 150%;
+}
+h5, h6{
+    line-height: 125%;
+}
+p{
+    margin: .5rem 0;
+}
+a{
+    color: #4c4c4c;
+}
+li{
+    line-height: 120%;
+}
+.hide{
+    display: none !important;
+}
+.animateX:hover{
+    animation: 2s flightX ease-in-out infinite;
+    transition: all .5s;
+}
+.animateY:hover{
+    animation: 2s flightY ease-in-out infinite;
+    transition: all .5s;
+}
+.shake:hover{
+    animation: .5s shake ease-in-out infinite;
+    transition: all 2s;
+}
+
+
+/*Break image*/
+div.break{
+    background: url("../img/HP_break.png") no-repeat center;
+    height: 2.5rem;
+    background-size: 2.5rem;
+    margin: 2rem 0 .5rem 0;
+}
+
+
+/*Harry, Ron, Hermione*/
+img.Harry, img.Ron, img.Hermione{
+    position: fixed;
+    z-index: 100;
+    transition: all 1s;
+}
+img.Harry{
+    width: 30rem;
+    bottom: 0;
+    transform: translateY(100%);
+}
+img.Ron{
+    width: 14rem;
+    bottom: 0;
+    right: 40%;
+    transform: translateY(100%);
+}
+img.Hermione{
+    width: 27rem;
+    bottom: 0;
+    right: 0;
+    transform: translateX(100%);
+}
+
+
+
+/*Go Top Button*/
+.goTopBtnWrapper{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.goTopBtn{
+    background-color: transparent;
+    border: none;
+    border-radius: 100%;
+    font-size: 2.5rem;
+    margin: 2rem;
+    outline: none;
+}
+.goTopBtn:hover{
+    transform: translateY(-.5rem);
+    font-size: 2.7rem;
+    transition: all .5s;
+}
+
+
+/*Navbar*/
+#nav{
+    background-color: hsl(220, 40%, 90%);
+}
+#nav > .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+#nav .nav__right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+#nav ul{
+    list-style: none;
+    display: flex;
+}
+#nav li+li{
+    padding-left: 2rem;
+}
+.logo{
+    width: 6rem;
+}
+#nav input[type="search"]{
+    padding: .2rem .4rem;
+    border: 1px solid #001944;
+    border-radius: 10px;
+}
+#nav button{
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+/*Offer*/
+#offer{
+    background-image: linear-gradient(to right top, #051937, #001944, #001750, #00145b, #060e64);
+    color: #fff;
+}
+#offer > .container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 0;
+}
+.offerBook{
+    width: 25rem;
+}
+.offer__right > h1{
+    text-align: center;
+    font-size: 3rem;
+}
+.offer__right > span{
+    text-align: justify;
+}
+
+
+/*Main*/
+.main__section{
+    padding: 3rem 0;
+}
+.main__section:nth-of-type(2n){
+    background-color: hsl(220, 40%, 90%);
+}
+.sectionTitle{
+    text-align: center;
+    margin: 1rem 0;
+}
+/*About Books*/
+.aboutBooksContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+.aboutBooks__left{
+    width: calc(60% - 1rem);
+}
+.aboutBooks__right{
+    width: calc(40% - 1rem);
+}
+.aboutBooks__right > img{
+    width: 100%;
+}
+.aboutBooks__left > p:first-letter{
+    font-size: 500%;
+}
+/*Characters*/
+.charactersWrapper > div{
+    margin: 1rem 0;
+}
+.characters__bottom{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+}
+.characters__bottom > img{
+    width: calc((100% - 2rem) / 3);
+}
+#characters ul{
+    list-style-image: url("../img/16x16_quidditch.png");
+    list-style-position: inside;
+}
+#characters li+li{
+    margin-top: 1rem;
+}
+/*Author*/
+.authorWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+.author__left{
+    width: 50%;
+}
+.author__right{
+    width: 50%;
+}
+.author__left img{
+    width: 100%;
+}
+
+
+/*Footer*/
+#footer{
+    background-color: hsl(220, 40%, 90%)
+}
+#footer > .container{
+    padding: 1.5rem 0;
+}
+#footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+.legal{
+    margin: 1rem;
+    text-align: center;
+    color: #4c4c4c;
+}
+
+
+/*Animations*/
+@keyframes flightX {
+    0%{
+        transform: translateX(2rem);
+    }
+    50%{
+        transform: translateX(-2rem);
+    }
+    100%{
+        transform: translateX(2rem);
+    }
+}
+
+@keyframes flightY {
+    0%{
+        transform: translateY(2rem);
+    }
+    50%{
+        transform: translateY(-2rem);
+    }
+    100%{
+        transform: translateY(2rem);
+    }
+}
+
+@keyframes shake {
+    0%{
+        transform: rotate(-20deg);
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(-20deg);
+    }
+}
